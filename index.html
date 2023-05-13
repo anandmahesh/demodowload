@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Download Text File Demo</title>
+		<style>
+			body{ font: menu; }
+		</style>
+		<script src='download.js'></script>
+	</head>
+	<body>
+		<h1>Download Text File Demo</h1>
+		<button onclick="go()">Click me</button>
+		<main></main>
+		<script>
+			function go(){
+				download(new Blob(["hello world"]), "dlTextBlob.txt", "text/plain");
+			}
+		</script>
+	</body>
+
+</html>
