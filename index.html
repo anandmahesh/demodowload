@@ -18,7 +18,7 @@
 				var x=new XMLHttpRequest();
 				x.open( "GET", url , true);
 				x.responseType="blob";
-				x.onload= function(e){download(e.target.response, "awesomesauce.png", "image/png");};
+				x.onload= function(e){download(e.target.response, "sample.pdf", "application/pdf");};
 				x.send();
 
 				//download("./image.jpg", "image.jpg", "image/jpg");
