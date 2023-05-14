@@ -14,7 +14,18 @@
 		<main></main>
 		<script>
 			function go(){
-				download(new Blob(["hello world"]), "dlTextBlob.txt", "text/plain");
+				var url = "Files/" + "sample.pdf";
+				var x=new XMLHttpRequest();
+				x.open( "GET", url , true);
+				x.responseType="blob";
+				x.onload= function(e){download(e.target.response, "awesomesauce.png", "image/png");};
+				x.send();
+
+				//download("./image.jpg", "image.jpg", "image/jpg");
+
+				//download("/image.jpg");
+
+				//download(new Blob("./image.jpg"), "image.jpg", "image/jpg");
 			}
 		</script>
 	</body>
